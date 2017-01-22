@@ -1,7 +1,7 @@
 # Software Engineering
 This is the readme.
 
-WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
+WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment(Silvers 199)
 
 ## To-do
 
