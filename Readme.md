@@ -1,6 +1,8 @@
 # Software Engineering
 This is the readme.
 
+WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
+
 ## To-do
 
 - [x] Discuss and agree on an idea
