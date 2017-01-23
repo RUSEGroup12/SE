@@ -20,3 +20,5 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment(Silvers 199)
 2. Q2 How do you guys feel about the parking garage question?
   - Akhil : I like the traffic one because we have freedom to expand on it how we wish. The parking garage one may be easier, but how are we going to significantly improve on it to get the A?
   - Bhargav: I think the parking deck idea is great and actually borad. Here is an idea. We have cameras/ sensors that detect when a car is entering and a software system that will contact your phone and tell you where to park based on what place your trying to get to. For example a mall parking deck would have you park on 1st floor for x stores and 2nd floor for y stores. this can also monitor the occupancy and crowededness of the stores/mall/parking deck in general
+
+3. Q3 Should we subdivide into smaller groups like Marsic recommended?
