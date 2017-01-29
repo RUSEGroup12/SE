@@ -1,10 +1,9 @@
 # Software Engineering
-- Documentation and other information can be found at https://drive.google.com/drive/folders/0B76pluv933ZFZkh3Tm85bWFTUDg?usp=sharing
 
+Documentation and Reports can be found at https://drive.google.com/drive/folders/0B76pluv933ZFZkh3Tm85bWFTUDg?usp=sharing
 WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment(Silvers 199)
 
 ## To-do
-
 - [x] learn to use git command line + github if you don't. (Youtube, book, ask others)
 - [x] Discuss and agree on an idea
 - [x] Email Marsic team member names, emails, and project topic
@@ -13,6 +12,13 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment(Silvers 199)
 - [x] Come up with a drawn out project proposal which outlines the intent of what we want to make <u>**DUE JAN 29th**</u>
 - [ ] Get a general idea of how each project should get started
 - [ ] Start working on Report 1 Part 1
+
+## HOMEWORK Before meeting on 2/3
+- Know git command line or software
+- Be prepared with the 3 questions:
+  1. What did I do in this past week that helped the team with the goal
+  2. What will I do today to help the team reach the goal
+  3. Do I see any impediments that prevents me or the development team from meeting goal?
 
 ## Questions?
 1. Should we use google docs for the documentation?
