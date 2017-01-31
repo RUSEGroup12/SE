@@ -17,9 +17,9 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment(Silvers 199)
 ## HOMEWORK Before meeting on 2/3
 - Know git command line or software
 - Be prepared with the 3 questions:
-  1. What did I do in this past week that helped the team with the goal
-  2. What will I do today to help the team reach the goal
-  3. Do I see any impediments that prevents me or the development team from meeting goal?
+  1. What **did** I do in this past week that helped the team with the goal?
+  2. What **will** I do this week to help the team reach the goal?
+  3. Do I see any impediments that prevent me or the development team from meeting it's goal?
 
 ## Questions?
 1. Should we use google docs for the documentation?
