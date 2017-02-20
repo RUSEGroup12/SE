@@ -10,8 +10,11 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
   3. Do I see any impediments that prevent me or the development team from meeting it's goal?
 
 ## Project: Smart Home System
-## Structure: 
--SHS: Centeral DB with server pub facing
+## Structure:
+-SHS: Central DB with server pub facing
+
 ----SSS:
+
 ----SES:
+
 ----SAS:
