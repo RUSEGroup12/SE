@@ -11,10 +11,10 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
 
 ## Project: Smart Home System
 ## Structure:
--SHS: Central DB with server pub facing
+- SHS: Central DB with server pub facing
 
-----SSS:
+ - SSS:
 
-----SES:
+ - SES:
 
-----SAS:
+ - SAS:
