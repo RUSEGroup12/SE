@@ -13,8 +13,8 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
 ## Structure:
 -SHS: Central DB with server pub facing
 
-----SSS:
+ --SSS:
 
-----SES:
+ --SES:
 
-----SAS:
+ --SAS:
