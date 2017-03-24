@@ -1,51 +1,69 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <arpa/inet.h>
-#include <sys/types.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<sys/types.h>
+#include<sys/socket.h>
+#include<netinet/in.h>
+#include<errno.h>
+#include<string.h>
+#include<unistd.h>
 
-//from https://en.wikibooks.org/wiki/C_Programming/Networking_in_UNIX
 
 int main(){
-
-
-struct sockaddr_in dest;
-struct sockaddr_in server;
-
-int mysocket;
-
-socklen_t socksize = sizeof(struct sockaddr_in);
-
-memset(&server,0, sizeof(server));
-server.sin_family = AF_INET;
-server.sin_addr.s_addr = htonl(INADDR_ANY);
-server.sin_port = htons(10000);
-
-bind(mysocket,(struct sockaddr*)&server, sizeof(struct sockaddr));
-
-
-
-listen(mysocket,10);
-int clientSocket; 
-
-while(1){
 	
-	clientSocket = accept(mysocket, (struct sockaddr*)&dest, &socksize);
 	
-	char cSize[33];
-		 
-		 if((recv(clientSocket, cSize, 33,0))==-1){	
+	int sock, cli;
+	struct sockaddr_in server, client;
+	unsigned int len;
+	
+	char buf [7];
+	int sent;
+	
+	if((sock = socket(AF_INET, SOCK_STREAM, 0))==-1){
 		
-		perror("recv");
+		perror("socket: ");
 		exit(-1);
+	}
 	
+	server.sin_family = AF_INET;
+	server.sin_port = htons(10000);
+	server.sin_addr.s_addr = INADDR_ANY;
+	bzero(&server.sin_zero,8);
+	
+	len = sizeof(struct sockaddr_in); 
+	
+	if((bind(sock, (struct sockaddr *)&server, len)) == -1){	//binding server socket to server ip info
+		
+		perror("bind");
+		exit(-1);
+	}
+	
+	if((listen(sock,5) == -1)){		//listening on socket
+		
+		perror("listen");
+		exit(-1);
+	}
+	
+	
+	pid_t ppid = getppid(); //later for forking new process. child processes will handle accepting socket
+	
+	while(1){
+		
+		if((cli = accept(sock, (struct sockaddr *)&client, &len)) == -1){
+			
+			perror("accept");
+			exit(-1);
 		}
 		
-		printf("Got it");
-
-
+		recv(cli, buf, sizeof(buf), 0);
+		buf[6]='\0';
+		
+		printf("%s\n", buf);
+		
+		close(cli);
+		
 	}
+	
+	
+	
+	
 }
