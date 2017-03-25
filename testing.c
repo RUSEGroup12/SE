@@ -8,13 +8,20 @@
 #include<unistd.h>
 #include<arpa/inet.h>
 
-int getSignal(char* data);
 
-int transmitSignal(){
+/*This will test that all possible values
+  for the decibel range can traverse the 
+  network and reach the other side*/
+int test1(){
+
+	
+	 int len = 3;
 	 
-	 char* data = (char*)calloc(7, sizeof(char));	//will hold wifi decibels
-	 data[4]='\0';			
-	 int len = 7;
+	 for(int c1=0; c1>-100; c1--){
+		 
+		 char data [3] = "000";
+		 
+		 sprintf(data, "%d", c1);
 	 
 	 struct sockaddr_in remote_server;		//will hold ip info of server
 	 int sock;							//socket to access server
@@ -36,47 +43,32 @@ int transmitSignal(){
 	connect(sock,(struct sockaddr*)&remote_server, sizeof(struct sockaddr_in));
 	 
 	 
-	 getSignal(data);
 	if((send(sock, data, len, 0) )==-1){		//transmitting data over network
 		
 		perror("send");
 		exit(-1);
 	}
 	
-	free(data);	
 		
 	close(sock);
 	
 	sleep(1);
+	}
+
 }
 
-int getSignal(char* data){
+int test2(){
 	
-	system("iwconfig wlo1>netinfo.txt");									//get iwconfig and saving output to text
-	system("grep 'level=' netinfo.txt | sed 's/^.*: //'>signal.txt");		//saving line with signal level to text
 	
-	FILE *fp;
-	fp = fopen("signal.txt", "r");
 	
-	char signalLine[110];	//stores line in array
-	
-	fgets(signalLine,100,fp);
-	
-	char c = '-';	//token to find
-	
-	char* val = strchr(signalLine,c);	//finding location of -
-	
-	memcpy(data,val,4);
-	
-	puts(val);
-	
-	fclose(fp);
 }
+
+
 
 int main(){
 	
-	while(1){
-	transmitSignal();
-	}
+	
+	test1();
+
 	
 }

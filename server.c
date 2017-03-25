@@ -8,7 +8,7 @@
 #include<unistd.h>
 
 
-int main(){
+int runServer(){
 	
 	
 	int sock, cli;
@@ -64,6 +64,11 @@ int main(){
 	}
 	
 	
+}
+
+
+int main(){
 	
+	runServer();
 	
 }
