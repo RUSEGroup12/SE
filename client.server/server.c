@@ -52,8 +52,8 @@ int runServer(){
 			exit(-1);
 		}
 		
-		recv(clientSock, data, sizeof(buf), 0);
-		buf[6]='\0';
+		recv(clientSock, data, sizeof(data), 0);
+		data[6]='\0';
 		
 		printf("%s\n", data);
 		
@@ -66,6 +66,7 @@ int runServer(){
 
 
 int main(){
+	
 	
 	runServer();
 	
