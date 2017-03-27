@@ -18,16 +18,37 @@ public class HVAC extends AppCompatActivity {
 
     public void increment(View view) {
         temp++;
-        display(temp);
+        displayPreTemp(temp);
+        TextView v = (TextView) findViewById(R.id.currentTemp);
+        int tem = Integer.parseInt(v.getText().toString());
+        double t = Time2Temp(0.3,7,temp,tem);
+        updateDisplayT2T(t);
+    }
+
+
+    private void updateDisplayT2T(double t){
+
+        TextView quantityTextView = (TextView) findViewById(R.id.time2Temp);
+        quantityTextView.setText("" + t +" mintues");
 
     }
+
+    private double Time2Temp(double k, int helpConst, int preferred, int current) {
+        if(preferred == current){
+            return 0;
+        }
+        double x = Math.exp((double)current/(double)preferred);
+        double t = - (helpConst /(x * k)) * Math.log((0.01*preferred)/(preferred - current));
+        return t;//time2tmp
+    }
+
 
     public void decrement(View view) {
         temp--;
-        display(temp);
+        displayPreTemp(temp);
     }
 
-    private void display(int number) {
+    private void displayPreTemp(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.prefTemp);
         quantityTextView.setText("" + number +" \u00b0F");
     }
