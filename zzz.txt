@@ -1,0 +1,57 @@
+public class HVAC {
+
+        // Class constructor
+        public HVAC(){}
+
+        public double k = 0.3; // used in e^(kt)
+        public int helpConst = 7; // multiplier used to get normalized timeToTemp
+
+        // Given 4 values calculates timeToTemp and returns a double
+        private double timeToTemp(double k, int helpConst, int preferred, int current){
+            double x = Math.exp((double)current/(double)preferred);
+            double t = - (helpConst /(x * k)) * Math.log((0.01*preferred)/(preferred - current));
+            return t;
+        }
+
+        // Given a TextView parameter it calculates timeToTemp and sets a new string to t
+        public void updateTimeToTemp(double k, int helpConst, int preferred, int current, TextView t){
+            double temp = timeToTemp(k, helpConst, preferred, current);
+            String setString = getString(temp);
+            t.setText( setString );
+        }
+
+        public String getString(double x){
+            String s;
+            if(x == 0){
+                s = "Temperature already reached";}
+            else if(x < 10){
+                s = "< 10 minutes";}
+            else if(x < 15){
+                s = "10 minutes";}
+            else if(x < 20){
+                s = "15 minutes";}
+            else if(x < 25){
+                s = "20 minutes";}
+            else if(x < 30){
+                s = "25 minutes";}
+            else if(x < 35){
+                s = "30 minutes";}
+            else if(x < 40){
+                s = "35 minutes";}
+            else if(x < 45){
+                s = "40 minutes";}
+            else if(x < 50){
+                s = "45 minutes";}
+            else if(x < 55){
+                s = "50 minutes";}
+            else if(x < 60){
+                s = "55 minutes";}
+            else if(x >= 60){
+                s = "> 1 hour";}
+            else
+                s = "Error";
+
+            return s;
+        }
+
+    }
