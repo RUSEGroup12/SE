@@ -1,5 +1,6 @@
 package comrusegroup12.github.smarthomesystem;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,11 @@ public class HVAC extends AppCompatActivity {
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.prefTemp);
         quantityTextView.setText("" + number +" \u00b0F");
+    }
+
+    public void back(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 }
