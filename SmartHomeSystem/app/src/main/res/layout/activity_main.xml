@@ -10,47 +10,71 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:layout_weight=".25"
-            android:text="HVAC"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:background="#ff563c"
-            android:onClick="openHVAC"/>
-        <TextView
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="133dp"
+                android:layout_height="88dp"
+                android:layout_weight="1"
+                android:background="#ff563c"
+                android:gravity="center_vertical"
+                android:onClick="openHVAC"
+                android:text="HVAC"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="18dp"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="135dp"
+                android:layout_height="88dp"
+                android:layout_weight="1"
+                android:background="#ffe854"
+                android:gravity="center_vertical"
+                android:text="Lights"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="18dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:layout_weight=".25"
-            android:text="Lights"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:background="#ffe854"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:layout_weight=".25"
-            android:text="Sound"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:background="#4464f4"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="88dp"
-            android:layout_weight=".25"
-            android:text="Schedule"
-            android:textAlignment="center"
-            android:gravity="center_vertical"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:background="#04741e"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_weight="1"
+                android:background="#04741e"
+                android:gravity="center_vertical"
+                android:text="Schedule"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="18dp"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_weight="1"
+                android:background="#4464f4"
+                android:gravity="center_vertical"
+                android:text="Sound"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="18dp"/>
+        </LinearLayout>
 
     </LinearLayout>
 
