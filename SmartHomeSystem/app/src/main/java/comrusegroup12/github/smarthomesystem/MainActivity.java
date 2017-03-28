@@ -14,9 +14,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openHVAC(View view){
-
         Intent i = new Intent(this, HVAC.class);
         startActivity(i);
+    }
 
+    public void openAudio(View view){
+        Intent i = new Intent(this, Audio.class);
+        startActivity(i);
     }
 }

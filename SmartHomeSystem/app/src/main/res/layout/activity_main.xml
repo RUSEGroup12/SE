@@ -16,7 +16,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView2"
                 android:layout_width="133dp"
                 android:layout_height="88dp"
                 android:layout_weight="1"
@@ -30,7 +29,6 @@
                 android:layout_margin="18dp"/>
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="135dp"
                 android:layout_height="88dp"
                 android:layout_weight="1"
@@ -50,7 +48,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
                 android:layout_weight="1"
@@ -63,13 +60,13 @@
                 android:layout_margin="18dp"/>
 
             <TextView
-                android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
                 android:layout_weight="1"
                 android:background="#4464f4"
                 android:gravity="center_vertical"
-                android:text="Sound"
+                android:text="Audio"
+                android:onClick="openAudio"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 android:textStyle="bold"

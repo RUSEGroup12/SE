@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HVAC"
-                android:label="HVAC
-"></activity>
+        <activity
+            android:name=".HVAC"
+            android:label="HVAC " />
+        <activity android:name=".Audio"></activity>
     </application>
 
 </manifest>
