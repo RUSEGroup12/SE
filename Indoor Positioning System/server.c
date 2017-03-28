@@ -8,6 +8,34 @@
 #include<unistd.h>
 
 
+/*int speakerZero = 0;
+int speakerOne = 0;
+
+int setSpeakers(int decibel){		enabled for demo with laptop and desktop with soundcard only
+	
+	if(decibel>-42){
+		
+		system("amixer sset Front 0");
+		system("amixer sset Headphone 100");
+		//speakerZero = 0;
+		//speakerOne = 1;
+		
+	}
+	
+	else{
+		system("amixer sset Front 100");
+		system("amixer sset Headphone 0");
+		//speakerZero = 1;
+		//speakerOne = 0;
+		
+		
+		
+	}
+	
+	
+}*/
+
+
 int runServer(){
 	
 	
@@ -54,6 +82,7 @@ int runServer(){
 		
 		recv(clientSock, data, sizeof(data), 0);
 		data[6]='\0';
+		//setSpeakers(atoi(data));		enabled for demo with laptop and desktop with soundcard only
 		
 		printf("%s\n", data);
 		
@@ -66,7 +95,6 @@ int runServer(){
 
 
 int main(){
-	
 	
 	runServer();
 	

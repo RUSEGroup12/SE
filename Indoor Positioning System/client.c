@@ -12,8 +12,8 @@ int getSignal(char* data);
 
 int transmitSignal(){
 	 
-	 int len = 7;	//size to send over network
-	 char* data = (char*)calloc(len, sizeof(char));	//will hold wifi decibels
+	 int streamLength = 7;	//size to send over network
+	 char* data = (char*)calloc(streamLength, sizeof(char));	//will hold wifi decibels
 	 data[4]='\0';			
 	 
 	 
@@ -23,7 +23,7 @@ int transmitSignal(){
 	 
 	 if((sock = socket(AF_INET, SOCK_STREAM, 0))==-1){
 		
-		perror("socket: ");
+		perror("socket error");
 		exit(-1);
 	}
 	
@@ -38,9 +38,9 @@ int transmitSignal(){
 	 
 	 
 	 getSignal(data);
-	if((send(sock, data, len, 0) )==-1){		//transmitting data over network
+	if((send(sock, data, streamLength, 0) )==-1){		//transmitting data over network
 		
-		perror("send");
+		perror("send error");
 		exit(-1);
 	}
 	
@@ -48,7 +48,7 @@ int transmitSignal(){
 		
 	close(sock);
 	
-	sleep(1);
+	sleep(2);
 }
 
 int getSignal(char* data){

@@ -35,7 +35,7 @@ int test1(){
 	
 	
 	remote_server.sin_family = AF_INET;
-	remote_server.sin_port = htons(10000);	//remote server port number
+	remote_server.sin_port = htons(25000);	//remote server port number
 	remote_server.sin_addr.s_addr = inet_addr("127.0.0.1");	//remote server ip 
 	bzero(&remote_server.sin_zero, 8);
 	
@@ -56,10 +56,13 @@ int test1(){
 	}
 
 }
+/*More Tests will be added
+  as the program gets closes
+  to completetion*/
 
 int test2(){
 	
-	
+	//Future
 	
 }
 
