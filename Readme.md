@@ -10,4 +10,4 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
   3. Do I see any impediments that prevent me or the development team from meeting it's goal?
 
 ## 3/28/17 Demo 1
-	All folders have indiuval readme's
+	All folders have individual readme's
