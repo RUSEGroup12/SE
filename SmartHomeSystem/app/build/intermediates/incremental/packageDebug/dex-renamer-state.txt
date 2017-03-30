@@ -1,0 +1,7 @@
+#Mon Mar 27 20:30:29 EDT 2017
+base.0=C\:\\Users\\akhil\\Documents\\GitHub\\SE\\SmartHomeSystem\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a61a0064ac2cd8ee777cd2c60ac230e8dfe869ec
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\akhil\\Documents\\GitHub\\SE\\SmartHomeSystem\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e7a6801adc936e068ba5b9fc08a8c6dd76fb1384\\classes.dex
+base.1=C\:\\Users\\akhil\\Documents\\GitHub\\SE\\SmartHomeSystem\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e7a6801adc936e068ba5b9fc08a8c6dd76fb1384
+file.0=C\:\\Users\\akhil\\Documents\\GitHub\\SE\\SmartHomeSystem\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a61a0064ac2cd8ee777cd2c60ac230e8dfe869ec\\classes.dex
