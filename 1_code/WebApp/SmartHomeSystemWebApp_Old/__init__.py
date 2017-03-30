@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, session
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'F34TF$($e34D';
+app.config['SECRET_KEY'] = 'test';
 
 @app.route('/')
 def home():

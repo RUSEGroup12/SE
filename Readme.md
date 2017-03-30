@@ -9,12 +9,5 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
   2. What **will** I do this week to help the team reach the goal?
   3. Do I see any impediments that prevent me or the development team from meeting it's goal?
 
-## Project: Smart Home System
-## Structure:
-- SHS: Central DB with server pub facing
-
- - SSS:
-
- - SES:
-
- - SAS:
+## 3/28/17 Demo 1
+	All folders have indiuval readme's
