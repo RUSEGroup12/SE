@@ -1,0 +1,3 @@
+All of the method I used in the creation of the SAS app,
+are defined under open source libraries which have already been thoroughly tested.
+This is the reason that the SAS does not require unit tests.
