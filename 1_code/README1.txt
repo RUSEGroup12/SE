@@ -10,4 +10,7 @@ The database is currently not connected or finalized
 
 Indoor positioning system has it's documentation which is through and extensive
 
-The web application could be 
+The web application is currently being built out but basic data persistance between pages has been implemented
+	1. open bash terminal (requires python 2.7.1+ , and pip)
+	2. move into project directory/1_code/WebApp/SmartHomeSystemWebApp_Old
+	
