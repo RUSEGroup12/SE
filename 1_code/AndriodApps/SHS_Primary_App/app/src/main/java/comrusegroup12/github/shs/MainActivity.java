@@ -23,8 +23,15 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int preferedTemp = 73; //needed for hvac if doing the no persistance way
+    //private int preferedTemp = 73; //needed for hvac if doing the no persistance way
     SharedPreferences settings;
+    //shared preferences
+    //SharedPreferences.Editor editor = settings.edit();
+    //editor.putInt("preferedTemp",73);
+    //editor.commit();
+    //settings.getInt("preferedTemp",73);
+    ///////
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -43,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         settings = this.getSharedPreferences("comrusegroup12.github.shs", Context.MODE_PRIVATE);
+        settings.edit().putInt("preferedTemp", 73).commit();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
@@ -55,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+
+
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -70,14 +80,10 @@ public class MainActivity extends AppCompatActivity {
 */
     }
     //hvac method
-    public void hvacIncrement(View view) {
-        preferedTemp++;
-        hvacDisplay(preferedTemp);
 
-    }
 
     public void hvacDecrement(View view) {
-        preferedTemp--;
+        int x = settings.getInt("preferedTemp",73);
         hvacDisplay(preferedTemp);
 
     }
