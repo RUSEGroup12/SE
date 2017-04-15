@@ -9,128 +9,152 @@
     android:paddingTop="16dp"
     tools:context="comrusegroup12.github.smarthomesystem.HVAC">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Preferred"
-        android:textSize="35dp"
-        android:id="@+id/preferred_text"
-        android:width="80dp"
-        android:paddingBottom="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/plusButton"
-        android:layout_toStartOf="@+id/plusButton" />
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Current"
-        android:textSize="35dp"
-        android:id="@+id/current_text"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/preferred_temp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="72"
-        android:id="@+id/preferred_temp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_below="@+id/preferred_text"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Time To Temperature"
-        android:id="@+id/time_to_temp_text"
-        android:width="200dp"
-        android:textSize="28dp"
-        android:layout_below="@+id/current_temp"
+        android:orientation="vertical"
+        android:weightSum="1"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="42dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/timeToTemp"
-        android:width="200dp"
-        android:text="&lt; 10 minutes"
-        android:layout_marginTop="30dp"
-        android:layout_below="@+id/time_to_temp_text"
-        android:layout_alignLeft="@+id/current_temp"
-        android:layout_alignStart="@+id/current_temp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="69"
-        android:id="@+id/current_temp"
-        android:layout_below="@+id/current_text"
-        android:layout_toLeftOf="@+id/degreeF2"
-        android:layout_toStartOf="@+id/degreeF2"
-        android:layout_marginTop="30dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="35dp"
+                android:text="Current" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
-        android:id="@+id/plusButton"
-        android:layout_alignBottom="@+id/preferred_text"
-        android:layout_toRightOf="@+id/current_text"
-        android:layout_toEndOf="@+id/current_text"
-        android:onClick="increasePreferred"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="72"
+                android:id="@+id/current_temp"
+                android:layout_marginLeft="140dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:id="@+id/minusButton"
-        android:onClick="decreasePreferred"
-        android:layout_below="@+id/preferred_text"
-        android:layout_alignLeft="@+id/plusButton"
-        android:layout_alignStart="@+id/plusButton" />
+        </LinearLayout>>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Set"
-        android:id="@+id/setButton"
-        android:layout_below="@+id/timeToTemp"
-        android:layout_alignRight="@+id/current_text"
-        android:layout_alignEnd="@+id/current_text"
-        android:layout_marginTop="32dp"
-        android:onClick="setTTT" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=" °F"
-        android:id="@+id/degreeF1"
-        android:layout_above="@+id/current_text"
-        android:layout_toRightOf="@+id/preferred_temp"
-        android:layout_toEndOf="@+id/preferred_temp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="35dp"
+                android:text="Preferred" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text=" °F"
-        android:id="@+id/degreeF2"
-        android:layout_alignTop="@+id/current_temp"
-        android:layout_alignLeft="@+id/degreeF1"
-        android:layout_alignStart="@+id/degreeF1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="72"
+                android:id="@+id/preferred_temp"
+                android:layout_marginLeft="112dp" />
+
+
+
+        </LinearLayout>>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="163dp"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/minusButton"
+                android:onClick="dec"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/plusButton"
+                android:onClick="inc"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TIME TO TEMPERATURE"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time2temp"
+            android:layout_marginLeft="10dp"
+            android:text="0.0"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text=" Minutes"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>>
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_marginTop="10dp"
+         android:orientation="vertical">
+
+         <Button
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Away"
+             android:id="@+id/awayButton"
+             android:onClick=""/>
+
+         <Button
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="Home"
+             android:id="@+id/homeButton"
+             android:onClick=""/>
+
+     </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
