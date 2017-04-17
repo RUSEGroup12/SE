@@ -137,6 +137,16 @@
         </LinearLayout>
         >
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Set"
+                android:id="@+id/setBut"
+                android:onClick="setFunc"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -148,14 +158,14 @@
                 android:id="@+id/awayButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick=""
+                android:onClick="awaySetting"
                 android:text="Away" />
 
             <Button
                 android:id="@+id/homeButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick=""
+                android:onClick="homeSetting"
                 android:text="Home" />
 
         </LinearLayout>
