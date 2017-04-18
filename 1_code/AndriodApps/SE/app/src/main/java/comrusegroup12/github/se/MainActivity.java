@@ -60,12 +60,9 @@ public class MainActivity extends AppCompatActivity {
         int cTemp = settings.getInt("currentTemp",73);
         int pTemp = settings.getInt("prefTemp",73);
         String t2t = String.valueOf(t2t(cTemp,pTemp,0.3,7));
-        if(t2t.equals("NaN")||t2t.equals(null)){
-            t2t = "0.0";
-        }
-        else{
-            t2t = t2t.substring(0,4);
-        }
+
+        t2t = t2t.substring(0,4);
+
 
         //update cache
         settings.edit().putString("t2t",t2t).commit();
@@ -77,11 +74,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public double t2t(int current, int preferred, double k, int helpConst){
-
-        double x = Math.exp((double)current/(double)preferred);
-        double t = - (helpConst /(x * k)) * Math.log((0.01*preferred)/(preferred - current));
-        return t;
-
+        if(preferred>current) {
+            double x = Math.exp((double) current / (double) preferred);
+            double t = -(helpConst / (x * k)) * Math.log((0.01 * preferred) / (preferred - current));
+            return t;
+        }
+        else if(preferred==current){
+            return 0.0;
+        }
+        else{
+            return 0.0;
+        }
     }
 
     public void homeSetting(View view){
