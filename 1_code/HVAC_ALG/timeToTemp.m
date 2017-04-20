@@ -1,8 +1,8 @@
 function timeToTemp(initial, final, outside)
     data = load('ex1data2.txt');
-    X = data(:, 1:3); % [init final outside]
-    time = data(:, 4);
-    m = length(time);
+    X = data(:, 1:3); % [init final outside]  get first 3 colomns
+    time = data(:, 4); % get the forth colomn (time)
+    m = length(time);  %number of rows or enteries of data
     
     [X mu sigma] = featureNormalize(X);
     X = [ones(m, 1) X];
