@@ -1,18 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\akhil\\Desktop\\Android Apps\\SAS_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\akhil\\Desktop\\Android Apps\\SAS_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "C:\\Users\\akhil\\Documents\\GitHub\\SE\\1_code\\AndriodApps\\SAS_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\akhil\\Documents\\GitHub\\SE\\1_code\\AndriodApps\\SAS_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\akhil\\Desktop\\SAS_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
-        "source": "C:\\Users\\akhil\\Desktop\\SAS_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\akhil\\Desktop\\SAS_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
-        "source": "C:\\Users\\akhil\\Desktop\\SAS_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\akhil\\Desktop\\Android Apps\\SAS_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
-        "source": "C:\\Users\\akhil\\Desktop\\Android Apps\\SAS_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "C:\\Users\\akhil\\Documents\\GitHub\\SE\\1_code\\AndriodApps\\SAS_app\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher_round.png",
+        "source": "C:\\Users\\akhil\\Documents\\GitHub\\SE\\1_code\\AndriodApps\\SAS_app\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     }
 ]

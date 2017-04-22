@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:2:1-22:12
 	package
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:3:5-40
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:3:5-40
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:5:5-20:19
 MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\akhil\.android\build-cache\7c933e26d186a4ab90735a187ba072413235da09\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.0] C:\Users\akhil\.android\build-cache\4d461cd481c027ceef95044c6a41e144be98b780\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\akhil\.android\build-cache\a6a7293586f0bb9ef0594a736298da04ba1a6dbb\output\AndroidManifest.xml:29:5-20
@@ -26,35 +26,35 @@ MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\akhil\
 MERGED from [com.android.support:support-compat:25.3.0] C:\Users\akhil\.android\build-cache\20223752b2ace45f02925d695ef80348174380bd\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\akhil\.android\build-cache\8da7499071294e0c4272e5cf37f961be3ba0a657\output\AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:8:9-41
 	android:supportsRtl
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:10:9-35
 	android:roundIcon
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:9:9-54
 	android:allowBackup
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:6:9-35
 	android:icon
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:7:9-43
 	android:theme
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:11:9-40
 activity#com.example.akhil.sas_app.MainActivity
-ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:12:9-19:20
+ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:12:9-19:20
 	android:screenOrientation
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:13:13-49
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:13:13-49
 	android:name
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:12:19-47
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:12:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml:17:27-74
 uses-sdk
-INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\akhil\.android\build-cache\7c933e26d186a4ab90735a187ba072413235da09\output\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:25.3.0] C:\Users\akhil\.android\build-cache\4d461cd481c027ceef95044c6a41e144be98b780\output\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\akhil\.android\build-cache\a6a7293586f0bb9ef0594a736298da04ba1a6dbb\output\AndroidManifest.xml:21:5-23:60
@@ -68,11 +68,11 @@ MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\ak
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\akhil\.android\build-cache\7c933e26d186a4ab90735a187ba072413235da09\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\akhil\Desktop\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\akhil\Documents\GitHub\SE\1_code\AndriodApps\SAS_app\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\akhil\.android\build-cache\7c933e26d186a4ab90735a187ba072413235da09\output\AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-v4:25.3.0] C:\Users\akhil\.android\build-cache\4d461cd481c027ceef95044c6a41e144be98b780\output\AndroidManifest.xml:25:5-27:34
