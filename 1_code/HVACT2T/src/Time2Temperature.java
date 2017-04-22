@@ -4,17 +4,6 @@ import java.util.Scanner;
 
 public class Time2Temperature {
 
-	
-	public static void print2Darr(double[][] x){
-		
-		for(int i = 0; i < x.length; i++){
-			
-			for(int j = 0; j < x[0].length; j++){
-				System.out.println();
-			}
-		}
-	}
-	
 	public static double[] meanAndStdiv(int[] list) {
 		
 		double[] returnArr = {0.0,0.0};
@@ -38,17 +27,14 @@ public class Time2Temperature {
 	}
 	
 	
-	public static double[][] featureNormalize(int[] currentArr, int[] preferredArr, int[] outsideArr, double[] currentMS , double[] preferredMS, double[] outsideMS ){
+	public static int[] featureNormalize(int[] currentArr, int[] preferredArr, int[] outisdeArr, int lines, int[] mu ){
 		
-		double [][] normalized = new double[currentArr.length][3];
 		
-		for(int i = 0; i < currentArr.length; i++ ){
-			normalized[i][0] = (currentArr[i] - currentMS[0]) / currentMS[1];
-		    normalized[i][1] = (preferredArr[i] - preferredMS[0]) / preferredMS[1];
-		    normalized[i][2] = (outsideArr[i] - outsideMS[0]) / outsideArr[1];
-		}
 		
-		return normalized;
+		
+		
+		int [] x = {0,0,0,0};
+		return  x;
 	}
 	
     public static double t2t(int inital, int finalT, int outside) throws FileNotFoundException{
@@ -75,12 +61,7 @@ public class Time2Temperature {
 			timeArr[i] = Integer.valueOf(temp[3]);
 			i++;
 		}
-    	double[] currentMS = meanAndStdiv(currentArr); //[x,y]
-    	double[] preferredMS = meanAndStdiv(preferredArr);//[x,y]
-    	double[] outsideMS = meanAndStdiv(outsideArr);//[x,y]
     	
-    	
-    	double[][] normalizedArr = featureNormalize(currentArr, preferredArr, outsideArr, currentMS , preferredMS, outsideMS);
     	
 		
     	return 0.0;
@@ -94,7 +75,11 @@ public class Time2Temperature {
     
     public static void main(String[] args) throws FileNotFoundException{
     	
-    	t2t(5,4,10);
+    	
+    	int[] x = {1,2,3,4,5,6};
+    	double[] y = meanAndStdiv(x);
+    	System.out.println(y[0]);System.out.println(y[1]);
+    	
 		
     }
     
