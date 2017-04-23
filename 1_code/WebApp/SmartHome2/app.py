@@ -27,7 +27,8 @@ def currentF():
 @app.route('/data/preferred',methods=['POST'])
 def preferredF():
 	data['preferred'] = request.form['preferred']
+	test['status']= 'good'
 	return jsonify(data)
 
-if __name__ == '__main__':
     app.run(debug=True)
+if __name__ == '__main__':

@@ -2,17 +2,28 @@ package comrusegroup12.github.se;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.net.HttpURLConnection;
+import java.nio.charset.StandardCharsets;
 
 
 import static comrusegroup12.github.se.R.id.minusButton;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String apiurl = "http://9aa4017f.ngrok.io/data/preferred";
 
     SharedPreferences settings;
     TextView prefTemp;
@@ -35,9 +46,6 @@ public class MainActivity extends AppCompatActivity {
         prefTemp.setText(String.valueOf(settings.getInt("prefTemp",72)));
         currentTemp.setText(String.valueOf(settings.getInt("currentTemp",72)));
         t2tView.setText(settings.getString("t22","0.0"));
-
-
-        //network stuff
 
 
     }
@@ -63,30 +71,63 @@ public class MainActivity extends AppCompatActivity {
         prefTemp.setText(String.valueOf(x));
     }
 
-    public void setFunc(View view){
+    public void setFunc(View view) {
         //calculates the temperature
-        int cTemp = settings.getInt("currentTemp",73);
-        int pTemp = settings.getInt("prefTemp",73);
-        String t2t = String.valueOf(t2t(cTemp,pTemp,0.3,7));
+        int cTemp = settings.getInt("currentTemp", 73);
+        int pTemp = settings.getInt("prefTemp", 73);
+        String t2t = String.valueOf(t2t(cTemp, pTemp, 0.3, 7));
 
-        t2t = t2t.substring(0,4);
+        t2t = t2t.substring(0, 4);
 
 
         //update cache
-        settings.edit().putString("t2t",t2t).commit();
+        settings.edit().putString("t2t", t2t).commit();
 
         //update the t2t view
         t2tView = (TextView) findViewById(R.id.time2temp);
         t2tView.setText(t2t);
 
-        HttpClient httpClient = new DefaultHttpClient();
-        URL url = new URL(http://9aa4017f.ngrok.io/);
-        HttpURLConnection client = null;
-        try{
+        //network
 
-        }
+        new AsyncTask<Void, Void, String>() {
+            @Override
+            protected String doInBackground(Void... args) {
+                try {
+                    String URLpara = "preferred=" + String.valueOf(settings.getInt("prefTemp", 73));
+                    byte[] postData = URLpara.getBytes();
+                    int postDataLen = postData.length;
+                    URL url = new URL(apiurl);
+                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                    conn.setDoOutput(true);
+                    conn.setInstanceFollowRedirects(false);
+                    conn.setRequestMethod("POST");
+                    conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                    conn.setRequestProperty("charset", "utf-8");
+                    conn.setRequestProperty("Content-Length", Integer.toString(postDataLen));
+                    conn.setUseCaches(false);
+                    try {
+                        DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
+                        wr.write(postData);
+                        return "Good";
+                    } catch (IOException e) {
+                        return "IO prob";
+                    }
+                }
+                catch (MalformedURLException e){
+                    return "bad url";
+                }
+                catch (ProtocolException e){
+                    return "bad protcol";
+                }
+                catch (IOException e){
+                    return "bad input";
+                }
+            }
+            public void onPostExecute() {
+                return;
+            }
 
-
+        }.execute();
     }
 
     public double t2t(int current, int preferred, double k, int helpConst){
