@@ -118,17 +118,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <ToggleButton
-            android:id="@+id/alexa_integration"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/Alexa"
-            android:layout_alignBottom="@+id/Alexa"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:checked="true"
-            android:text="ToggleButton" />
-
         <TextView
             android:id="@+id/Alexa"
             android:layout_width="wrap_content"
@@ -139,6 +128,17 @@
             android:layout_marginTop="46dp"
             android:text="Alexa Integration"
             android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Alexa"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_alignTop="@+id/Alexa" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -147,17 +147,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/relativeLayout"
-        android:layout_marginTop="46dp">
-
-        <ToggleButton
-            android:id="@+id/adaptiveaudio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:checked="true"
-            android:text="ToggleButton" />
+        android:layout_marginTop="46dp"
+        android:id="@+id/relativeLayout2">
 
         <TextView
             android:id="@+id/Adaptive_Audio"
@@ -170,5 +161,13 @@
             android:text="Adaptive Audio"
             android:textSize="20sp" />
     </RelativeLayout>
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout2"
+        android:layout_alignEnd="@+id/totalTime"
+        android:layout_alignRight="@+id/totalTime" />
 
 </RelativeLayout>
