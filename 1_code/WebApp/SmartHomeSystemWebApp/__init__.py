@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, abort, session
-
+	
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'test';
 
@@ -19,6 +19,10 @@ def message():
         return abort(403)
     return render_template('message.html', username=session['username'],
                                            message=session['message'])
+
+@app.route('/data/<temp>')
+def data():
+	
 
 if __name__ == '__main__':
     app.run()
