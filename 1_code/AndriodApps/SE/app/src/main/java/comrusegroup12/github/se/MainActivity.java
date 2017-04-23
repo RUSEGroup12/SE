@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import java.net.URL;
+import java.net.HttpURLConnection;
+
 
 import static comrusegroup12.github.se.R.id.minusButton;
 
@@ -32,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
         prefTemp.setText(String.valueOf(settings.getInt("prefTemp",72)));
         currentTemp.setText(String.valueOf(settings.getInt("currentTemp",72)));
         t2tView.setText(settings.getString("t22","0.0"));
+
+
+        //network stuff
+
+
     }
 
     public void dec(View view) {
@@ -70,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
         //update the t2t view
         t2tView = (TextView) findViewById(R.id.time2temp);
         t2tView.setText(t2t);
+
+        HttpClient httpClient = new DefaultHttpClient();
+        URL url = new URL(http://9aa4017f.ngrok.io/);
+        HttpURLConnection client = null;
+        try{
+
+        }
+
 
     }
 
