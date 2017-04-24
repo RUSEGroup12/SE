@@ -1,5 +1,6 @@
 package comrusegroup12.github.se;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
@@ -89,45 +90,6 @@ public class MainActivity extends AppCompatActivity {
 
         //network
 
-        new AsyncTask<Void, Void, String>() {
-            @Override
-            protected String doInBackground(Void... args) {
-                try {
-                    String URLpara = "preferred=" + String.valueOf(settings.getInt("prefTemp", 73));
-                    byte[] postData = URLpara.getBytes();
-                    int postDataLen = postData.length;
-                    URL url = new URL(apiurl);
-                    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                    conn.setDoOutput(true);
-                    conn.setInstanceFollowRedirects(false);
-                    conn.setRequestMethod("POST");
-                    conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-                    conn.setRequestProperty("charset", "utf-8");
-                    conn.setRequestProperty("Content-Length", Integer.toString(postDataLen));
-                    conn.setUseCaches(false);
-                    try {
-                        DataOutputStream wr = new DataOutputStream(conn.getOutputStream());
-                        wr.write(postData);
-                        return "Good";
-                    } catch (IOException e) {
-                        return "IO prob";
-                    }
-                }
-                catch (MalformedURLException e){
-                    return "bad url";
-                }
-                catch (ProtocolException e){
-                    return "bad protcol";
-                }
-                catch (IOException e){
-                    return "bad input";
-                }
-            }
-            public void onPostExecute() {
-                return;
-            }
-
-        }.execute();
     }
 
     public double t2t(int current, int preferred, double k, int helpConst){
@@ -162,5 +124,45 @@ public class MainActivity extends AppCompatActivity {
         prefTemp.setText(String.valueOf(prefT));
         setFunc(view);
     }
+
+
+    public class AsyncTaskNetwork extends Activity{
+
+        @Override
+        @SuppressWarnings({""})
+        public void onCreate(Bundle savedInstanceState){
+
+            new MyTask().execute(apiurl);
+        }
+
+        private class MyTask extends AsyncTask<String, Void, String>{
+
+            @Override
+            protected void onPreExecute(){
+
+            }
+
+            @Override
+            protected String doInBackground(String... params){
+
+                String s = params[0];
+                return s;
+            }
+
+            @Override
+            protected void onProgressUpdate(Void... things){
+
+
+            }
+
+            @Override
+            protected void onPostExecute(String results){
+
+                super.onPostExecute(results);
+
+            }
+        }
+    }
+
 
 }
