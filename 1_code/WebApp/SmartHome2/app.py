@@ -49,12 +49,5 @@ def preferredF():
 	temp['preferred'] = request.form['preferred']
 	return jsonify(temp)
 
-
-'''
-@app.route('/temp/<string:name>', methods=['GET'])
-def returnOne(name):
-	return jsonify(temp[name])
-'''
-
 if __name__ == '__main__':
     app.run(debug=True)

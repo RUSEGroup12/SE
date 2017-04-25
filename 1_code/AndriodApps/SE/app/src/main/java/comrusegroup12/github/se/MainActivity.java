@@ -1,15 +1,30 @@
 package comrusegroup12.github.se;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.net.HttpURLConnection;
+import java.nio.charset.StandardCharsets;
+
 
 import static comrusegroup12.github.se.R.id.minusButton;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String apiurl = "http://9aa4017f.ngrok.io/data/preferred";
 
     SharedPreferences settings;
     TextView prefTemp;
@@ -32,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         prefTemp.setText(String.valueOf(settings.getInt("prefTemp",72)));
         currentTemp.setText(String.valueOf(settings.getInt("currentTemp",72)));
         t2tView.setText(settings.getString("t22","0.0"));
+
+
     }
 
     public void dec(View view) {
@@ -55,21 +72,23 @@ public class MainActivity extends AppCompatActivity {
         prefTemp.setText(String.valueOf(x));
     }
 
-    public void setFunc(View view){
+    public void setFunc(View view) {
         //calculates the temperature
-        int cTemp = settings.getInt("currentTemp",73);
-        int pTemp = settings.getInt("prefTemp",73);
-        String t2t = String.valueOf(t2t(cTemp,pTemp,0.3,7));
+        int cTemp = settings.getInt("currentTemp", 73);
+        int pTemp = settings.getInt("prefTemp", 73);
+        String t2t = String.valueOf(t2t(cTemp, pTemp, 0.3, 7));
 
-        t2t = t2t.substring(0,4);
+        t2t = t2t.substring(0, 4);
 
 
         //update cache
-        settings.edit().putString("t2t",t2t).commit();
+        settings.edit().putString("t2t", t2t).commit();
 
         //update the t2t view
         t2tView = (TextView) findViewById(R.id.time2temp);
         t2tView.setText(t2t);
+
+        //network
 
     }
 
@@ -105,5 +124,45 @@ public class MainActivity extends AppCompatActivity {
         prefTemp.setText(String.valueOf(prefT));
         setFunc(view);
     }
+
+
+    public class AsyncTaskNetwork extends Activity{
+
+        @Override
+        @SuppressWarnings({""})
+        public void onCreate(Bundle savedInstanceState){
+
+            new MyTask().execute(apiurl);
+        }
+
+        private class MyTask extends AsyncTask<String, Void, String>{
+
+            @Override
+            protected void onPreExecute(){
+
+            }
+
+            @Override
+            protected String doInBackground(String... params){
+
+                String s = params[0];
+                return s;
+            }
+
+            @Override
+            protected void onProgressUpdate(Void... things){
+
+
+            }
+
+            @Override
+            protected void onPostExecute(String results){
+
+                super.onPostExecute(results);
+
+            }
+        }
+    }
+
 
 }
