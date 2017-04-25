@@ -1,0 +1,2 @@
+curl --data "preferred=57" https://9aa4017f.ngrok.io/api/temp/preferred 
+

@@ -1,34 +1,53 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template, request, redirect, url_for, abort, session
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'test';
 
-data = {'current':'73','preferred':'74'}
+temp = {'current':'73','preferred':'73'}
 
 @app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
 
+@app.route('/login', methods=['POST'])
+def login():
+	session['username'] = request.form['username']
+	session['password'] = request.form['password']
+	return redirect(url_for('dashboard'))
+
+@app.route('/dashboard')
+def dashboard():
+	if not 'username' in session:
+		return abort(403)
+	return render_template('dash.html',username=session['username'])
+
+@app.route('/energy')
+def energy():
+	if not 'username' in session:
+		return abort(403)
+	return render_template('energy.html',username=session['username'],preferred=temp['preferred'],current=temp['current'])
+
+@app.route('/updateTemp', methods=['POST'])
+def updateTemp():
+	temp['preferred'] = request.form['preferred']
+	return redirect(url_for('energy'))
+
 @app.route('/api',methods=['GET'])
 def test():
 	return jsonify({'message from SHS' : 'working!'})
 
-@app.route('/data', methods=['GET'])
+@app.route('/api/temp', methods=['GET'])
 def returnAll():
-	return jsonify(data)
+	return jsonify(temp)
 
-@app.route('/data/<string:name>', methods=['GET'])
-def returnOne(name):
-	return jsonify(data[name])
-
-@app.route('/data/current',methods=['POST'])
+@app.route('/api/temp/current',methods=['POST'])
 def currentF():
-	data['current'] = request.form['current']
-	return jsonify(data)
+	temp['current'] = request.form['current']
+	return jsonify(temp)
 
-@app.route('/data/preferred',methods=['POST'])
+@app.route('/api/temp/preferred',methods=['POST'])
 def preferredF():
-	data['preferred'] = request.form['preferred']
-	test['status']= 'good'
-	return jsonify(data)
+	temp['preferred'] = request.form['preferred']
+	return jsonify(temp)
 
-    app.run(debug=True)
 if __name__ == '__main__':
+    app.run(debug=True)
