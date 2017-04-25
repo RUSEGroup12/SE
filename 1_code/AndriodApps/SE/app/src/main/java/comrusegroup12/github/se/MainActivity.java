@@ -24,7 +24,7 @@ import static comrusegroup12.github.se.R.id.minusButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String apiurl = "http://9aa4017f.ngrok.io/data/preferred";
+    public static final String apiurl = "http://9aa4017f.ngrok.io/api/preferred";
 
     SharedPreferences settings;
     TextView prefTemp;
