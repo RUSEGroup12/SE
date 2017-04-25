@@ -33,7 +33,7 @@ public class camerahud : MonoBehaviour {
 	void Start () {
 		//timeSince = Time.time;
 		nextActionTime = 0.0f;
-		period = 500;
+		period = 200;
 		current = 70;
 		preferred = 70;
 

@@ -6,25 +6,25 @@ import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.*;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
-import java.net.HttpURLConnection;
-import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 
 
 import static comrusegroup12.github.se.R.id.minusButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String apiurl = "http://9aa4017f.ngrok.io/api/preferred";
+    public static final String apiurl = "http://9aa4017f.ngrok.io/api/temp/preferred";
 
     SharedPreferences settings;
     TextView prefTemp;
@@ -44,16 +44,16 @@ public class MainActivity extends AppCompatActivity {
         settings = this.getSharedPreferences("comrusegroup12.github.se", Context.MODE_PRIVATE);
 
         //get from settings cache and update the views
-        prefTemp.setText(String.valueOf(settings.getInt("prefTemp",72)));
-        currentTemp.setText(String.valueOf(settings.getInt("currentTemp",72)));
-        t2tView.setText(settings.getString("t22","0.0"));
+        prefTemp.setText(String.valueOf(settings.getInt("prefTemp", 72)));
+        currentTemp.setText(String.valueOf(settings.getInt("currentTemp", 72)));
+        t2tView.setText(settings.getString("t22", "0.0"));
 
 
     }
 
     public void dec(View view) {
         //decrement the temp in data
-        int x = settings.getInt("prefTemp",73);
+        int x = settings.getInt("prefTemp", 73);
         x--;
         settings.edit().putInt("prefTemp", x).commit();
         //update the views
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void inc(View view) {
-       //increment the temp in data
-        int x = settings.getInt("prefTemp",73);
+        //increment the temp in data
+        int x = settings.getInt("prefTemp", 73);
         x++;
         settings.edit().putInt("prefTemp", x).commit();
         //update the view with the new temp
@@ -77,10 +77,9 @@ public class MainActivity extends AppCompatActivity {
         int cTemp = settings.getInt("currentTemp", 73);
         int pTemp = settings.getInt("prefTemp", 73);
         String t2t = String.valueOf(t2t(cTemp, pTemp, 0.3, 7));
-
-        t2t = t2t.substring(0, 4);
-
-
+        if(!(t2t.equals("0.0"))) {
+            t2t = t2t.substring(0, 4);
+        }
         //update cache
         settings.edit().putString("t2t", t2t).commit();
 
@@ -89,7 +88,28 @@ public class MainActivity extends AppCompatActivity {
         t2tView.setText(t2t);
 
         //network
-
+        RequestQueue MyRequestQueue = Volley.newRequestQueue(this);
+        StringRequest MyStringRequest = new StringRequest(Request.Method.POST, apiurl, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                //This code is executed if the server responds, whether or not the response contains data.
+                //The String 'response' contains the server's response.
+                Log.d("======================", response);
+            }
+        }, new Response.ErrorListener() { //Create an error listener to handle errors appropriately.
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                //This code is executed if there is an error.
+                Log.d("======================", error.toString());
+            }
+        }) {
+            protected Map<String, String> getParams() {
+                Map<String, String> MyData = new HashMap<String, String>();
+                MyData.put("preferred", String.valueOf(settings.getInt("prefTemp", 73))); //Add the data you'd like to send to the server.
+                return MyData;
+            }
+        };
+        MyRequestQueue.add(MyStringRequest);
     }
 
     public double t2t(int current, int preferred, double k, int helpConst){
@@ -98,11 +118,12 @@ public class MainActivity extends AppCompatActivity {
             double t = -(helpConst / (x * k)) * Math.log((0.01 * preferred) / (preferred - current));
             return t;
         }
-        else if(preferred==current){
-            return 0.0;
-        }
-        else{
-            return 0.0;
+        else {
+            int y = current - preferred;
+            preferred = current +y;
+            double x = Math.exp((double) current / (double) preferred);
+            double t = -(helpConst / (x * k)) * Math.log((0.01 * preferred) / (preferred - current));
+            return t;
         }
     }
 
@@ -114,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
         prefTemp = (TextView) findViewById(R.id.preferred_temp);
         prefTemp.setText(String.valueOf(x));
         setFunc(view);
+        return;
     }
 
     public void awaySetting(View view){
@@ -123,45 +145,7 @@ public class MainActivity extends AppCompatActivity {
         prefTemp = (TextView) findViewById(R.id.preferred_temp);
         prefTemp.setText(String.valueOf(prefT));
         setFunc(view);
-    }
-
-
-    public class AsyncTaskNetwork extends Activity{
-
-        @Override
-        @SuppressWarnings({""})
-        public void onCreate(Bundle savedInstanceState){
-
-            new MyTask().execute(apiurl);
-        }
-
-        private class MyTask extends AsyncTask<String, Void, String>{
-
-            @Override
-            protected void onPreExecute(){
-
-            }
-
-            @Override
-            protected String doInBackground(String... params){
-
-                String s = params[0];
-                return s;
-            }
-
-            @Override
-            protected void onProgressUpdate(Void... things){
-
-
-            }
-
-            @Override
-            protected void onPostExecute(String results){
-
-                super.onPostExecute(results);
-
-            }
-        }
+        return;
     }
 
 
