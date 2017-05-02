@@ -7,3 +7,5 @@ these values could be stores. Each data tuple consistions of 3 temperatures
 and 1 time value. [Current, Preferred, Outside, Time-to-temperature].
 Each time a new data tuple is recorded in the users home, the data is sent
 to the file and the algorithm calculates new parameters.
+
+Otherwise the server has a python dictionary that saves the data
