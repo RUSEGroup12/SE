@@ -49,3 +49,5 @@ Here is an example of a post request with the bash command line tool curl:
 $curl --data "preferred=57" https://9aa4017f.ngrok.io/api/temp/preferred 
 or
 $curl --data "preferred=57" https://localhost:5000/api/temp/preferred 
+-----------------------------------------------------------------------------
+
