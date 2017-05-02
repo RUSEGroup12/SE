@@ -1,13 +1,13 @@
-Andriod Apps
+Android Apps
 
 	1. open android studio (recommend v2.1+, on Unix based systems)
-	2. file -> import project -> /home/user/path/SE/AndriodApps/* 
+	2. file -> import project -> /home/user/path/SE/AndroidApps/* 
 	3. Gradle will probably have to update or install additional updates. 
 		Please allow time to update and android studio to make the app compatable.
 	4. Connect an android device with USB debugging enabled
 	5. Press the play button and choose the phone to run the application on
 
-*The primary android app to run is called AndriodApps/SmartSchedule
+*The primary android app to run is called AndroidApps/SmartSchedule
 *The only other app function that was not intergrated was the deamon service app
 called IndoorPositioningSystemApp
 *In order for the temperture functionality to work it requires the server be up. 
@@ -50,4 +50,30 @@ $curl --data "preferred=57" https://9aa4017f.ngrok.io/api/temp/preferred
 or
 $curl --data "preferred=57" https://localhost:5000/api/temp/preferred 
 -----------------------------------------------------------------------------
+
+MATLAB
+
+	1. Open MATLAB
+	2. Navigate to the folder with all the matlab files 
+		(SE\1_code\Time to Temperature\Primary Function Matlab GUI)
+	3. Open GUI2.m
+	4. Click the run button
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
