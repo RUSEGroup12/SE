@@ -1,4 +1,4 @@
-# Software Engineering Project
+# Software Engineering ECE 452 Group 12
 
 Please take a look at reamdme.txt
 
