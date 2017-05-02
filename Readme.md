@@ -11,3 +11,8 @@ WEEKLY MEETINGS : Fridays @ 5:30pm @ Bhargav's Apartment
 
 ## 3/28/17 Demo 1
 	All folders have individual readme's
+	
+
+![Screenshot 1](http://i.imgur.com/93RhOv0.png)
+
+
