@@ -59,31 +59,31 @@ MATLAB
 	4. Click the run button
 -----------------------------------------------------------------------------
 .
-├── 10_Unit_Tests
+├── 10_Unit_Tests							//Android Tests
 │   ├── HVACTest.java
 │   ├── Indoor_Positioning_System_Testing.c
 │   ├── README2.txt
 │   ├── SASTest.txt
 │   ├── SHSTest.java
 │   └── testSimpleGetResponseFromServerVolley.java
-├── 11_Intergration_Tests
+├── 11_Intergration_Tests					//network tests
 │   └── test.sh
-├── 1_README.txt
-├── 2_Report1_and_Report2
+├── 1_README.txt							//this file
+├── 2_Report1_and_Report2					//Reports
 │   ├── Group_12_First_Report_Final.pdf
 │   └── Group_12_Report_Second_Final.pdf
-├── 3_DemoPPT
+├── 3_DemoPPT								//Demo powerpoints
 │   ├── Group_12_Demo_1_Presentation.pptx
 │   └── Group_12_Demo_2_Presentation.pptx
-├── 4_Report_Three
+├── 4_Report_Three							//Reports
 │   └── doc.txt
 ├── 5_Source_Code
-│   ├── Alexa
+│   ├── Alexa								//Our alexa app 
 │   │   ├── alexa-avs-sample-app
-│   ├── AndriodApps
+│   ├── AndroidApps							//Our android apps
 │   │   ├── IndoorPositioningSystemApp
 │   │   │   
-│   │   ├── OldApps
+│   │   ├── OldApps							//apps that have merged into smart schedule
 │   │   │   ├── HVAC
 │   │   │   │
 │   │   │   ├── SAS_app
@@ -96,7 +96,7 @@ MATLAB
 │   │   │   │   
 │   │   │   └── SmartHomeSystem
 │   │   │ 
-│   │   └── SmartSchedule-master
+│   │   └── SmartSchedule-master			//Main app 
 │   │
 │   ├── Indoor Positioning System
 │   │   ├── client.c
