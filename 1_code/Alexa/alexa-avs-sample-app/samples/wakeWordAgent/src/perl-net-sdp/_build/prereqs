@@ -1,0 +1,16 @@
+do{ my $x = {
+       'recommends' => {
+                         'LWP::Simple' => 0
+                       },
+       'build_requires' => {
+                             'Module::Build' => '0.18'
+                           },
+       'test_requires' => {},
+       'requires' => {
+                       'Sys::Hostname' => 0,
+                       'perl' => '5.5.0',
+                       'Net::hostent' => 0
+                     },
+       'conflicts' => {}
+     };
+$x; }

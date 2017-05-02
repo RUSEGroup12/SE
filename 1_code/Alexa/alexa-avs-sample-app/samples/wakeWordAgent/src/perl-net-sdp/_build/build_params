@@ -1,0 +1,129 @@
+do{ my $x = [
+       {
+         'ARGV' => []
+       },
+       {},
+       {
+         'install_base_relpaths' => {},
+         'quiet' => undef,
+         'installdirs' => 'site',
+         'configure_requires' => {},
+         'recommends' => {
+                           'LWP::Simple' => 0
+                         },
+         'program_name' => undef,
+         'debug' => undef,
+         'extra_compiler_flags' => [],
+         'use_rcfile' => 1,
+         'mymetafile' => 'MYMETA.yml',
+         'tap_harness_args' => {},
+         'build_bat' => 0,
+         'c_source' => undef,
+         'magic_number' => undef,
+         'dist_name' => 'Net-SDP',
+         'install_path' => {},
+         'allow_pureperl' => 0,
+         'pureperl_only' => 0,
+         'license' => 'perl',
+         '_added_to_INC' => [],
+         'build_class' => 'Module::Build',
+         'blib' => 'blib',
+         'extra_linker_flags' => [],
+         'create_packlist' => 1,
+         'prereq_action_types' => [
+                                    'requires',
+                                    'build_requires',
+                                    'test_requires',
+                                    'conflicts',
+                                    'recommends'
+                                  ],
+         'create_license' => undef,
+         'create_makefile_pl' => 'passthrough',
+         'scripts' => undef,
+         'share_dir' => undef,
+         'module_name' => 'Net::SDP',
+         'recurse_into' => [],
+         'autosplit' => undef,
+         'prefix' => undef,
+         'create_readme' => undef,
+         'recursive_test_files' => undef,
+         'test_files' => undef,
+         'conflicts' => {},
+         'requires' => {
+                         'Sys::Hostname' => 0,
+                         'perl' => '5.5.0',
+                         'Net::hostent' => 0
+                       },
+         'bindoc_dirs' => [
+                            'blib/script'
+                          ],
+         'dist_author' => undef,
+         'base_dir' => '/home/pi/Desktop/alexa-avs-sample-app/samples/wakeWordAgent/src/perl-net-sdp',
+         'test_requires' => {},
+         'html_css' => '',
+         'dynamic_config' => 1,
+         'install_sets' => {},
+         'meta_add' => {},
+         'install_base' => undef,
+         'script_files' => [
+                             'examples/sdp2rat'
+                           ],
+         'config_dir' => '_build',
+         'needs_compiler' => '',
+         'dist_version_from' => 'lib/Net/SDP.pm',
+         'mb_version' => '0.421',
+         'cpan_client' => 'cpan',
+         'libdoc_dirs' => [
+                            'blib/lib',
+                            'blib/arch'
+                          ],
+         'prefix_relpaths' => {},
+         'use_tap_harness' => 0,
+         'mymetafile2' => 'MYMETA.json',
+         'extra_manify_args' => undef,
+         'xs_files' => undef,
+         'metafile' => 'META.yml',
+         'test_file_exts' => [
+                               '.t'
+                             ],
+         'pod_files' => undef,
+         'meta_merge' => {},
+         'metafile2' => 'META.json',
+         'release_status' => 'stable',
+         'destdir' => undef,
+         'build_requires' => {
+                               'Module::Build' => '0.18'
+                             },
+         'build_script' => 'Build',
+         'pollute' => undef,
+         'dist_suffix' => undef,
+         'orig_dir' => '/home/pi/Desktop/alexa-avs-sample-app/samples/wakeWordAgent/src/perl-net-sdp',
+         'dist_abstract' => undef,
+         'debugger' => undef,
+         'bundle_inc_preload' => [],
+         'get_options' => {},
+         'allow_mb_mismatch' => 0,
+         'pm_files' => undef,
+         'PL_files' => undef,
+         'include_dirs' => [],
+         'bundle_inc' => [],
+         'build_elements' => [
+                               'PL',
+                               'support',
+                               'pm',
+                               'xs',
+                               'share_dir',
+                               'pod',
+                               'script'
+                             ],
+         'original_prefix' => {},
+         'perl' => '/usr/bin/perl',
+         'verbose' => undef,
+         'auto_configure_requires' => 1,
+         'config' => undef,
+         'has_config_data' => undef,
+         'sign' => undef,
+         'dist_version' => '0.07'
+       }
+     ];
+$x; }
