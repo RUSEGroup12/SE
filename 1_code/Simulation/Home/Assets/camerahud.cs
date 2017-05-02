@@ -29,6 +29,9 @@ public class camerahud : MonoBehaviour {
 
 	private int positionOfMan;
 
+    public GUIStyle style = null;
+
+
 	// Use this for initialization
 	void Start () {
 		//timeSince = Time.time;
@@ -70,8 +73,8 @@ public class camerahud : MonoBehaviour {
 
 		string topright = string.Concat (disp, "\n", disp2, "\n", disp3, "\n", disp4, "\n");
 		string topleft = string.Concat  (disp5, "\n", disp6);
-		GUI.Label (new Rect(10,10,250,100), topright);
-		GUI.Label (new Rect(Screen.width - 200,10,200,80), topleft);
+		GUI.Label (new Rect(10,10,250,100), topright, style);
+		GUI.Label (new Rect(Screen.width - 400,10,200,80), topleft, style);
 		
 	}
 
